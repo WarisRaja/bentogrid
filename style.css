@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  padding: 3rem;
+  background-color: #C6D1DD;
+}
+
+section {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 70% 30%;
+}
+section img {
+  border-radius: 1rem;
+}
+section #left {
+  display: grid;
+  grid-template-rows: 70% auto;
+  grid-gap: 1rem;
+}
+section #left #lefttop {
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-areas: "a a b c " "d d e e ";
+}
+section #left #lefttop img {
+  height: 100%;
+  width: 100%;
+}
+section #left #lefttop #imga {
+  grid-area: a;
+}
+section #left #lefttop #imgb {
+  grid-area: b;
+}
+section #left #lefttop #imgc {
+  grid-area: c;
+}
+section #left #lefttop #imgd {
+  grid-area: d;
+}
+section #left #lefttop #imge {
+  grid-area: e;
+}
+section #left #leftbtm {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+section #left #leftbtm img {
+  height: 100%;
+  width: 100%;
+}
+section #right {
+  display: grid;
+  grid-template-rows: 50% 53%;
+  grid-gap: 1rem;
+}
+section #right img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 1020px) {
+  section {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  section #left {
+    grid-gap: 23.5vw;
+  }
+  section #left #lefttop {
+    grid-gap: 1rem;
+    display: grid;
+    grid-template-areas: "a a b b " "c c c c" "d d e e ";
+  }
+  section #right {
+    display: grid;
+    grid-template-rows: 50% 53%;
+    grid-gap: 1rem;
+  }
+  section #right img {
+    height: 100%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
