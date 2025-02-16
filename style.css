@@ -12,30 +12,30 @@ body {
 
 main {
   width: 100%;
-  padding: 3rem;
-  background-color: #C6D1DD;
+  padding: 2rem;
+  background-color: #c6d1dd;
 }
 
 section {
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   width: 100%;
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 70% 23%;
 }
 section img {
   border-radius: 1rem;
 }
 section #left {
   display: grid;
-  grid-template-rows: 70% auto;
+  grid-template-rows: 40% 21%;
   grid-gap: 1rem;
 }
 section #left #lefttop {
   grid-gap: 1rem;
   display: grid;
   grid-template-areas: "a a b c " "d d e e ";
+  grid-template-rows: 52% 42%;
 }
 section #left #lefttop img {
   height: 100%;
@@ -57,17 +57,19 @@ section #left #lefttop #imge {
   grid-area: e;
 }
 section #left #leftbtm {
+  height: 100%;
+  width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 55% auto;
   grid-gap: 1rem;
 }
 section #left #leftbtm img {
-  height: 100%;
+  max-height: 60%;
   width: 100%;
 }
 section #right {
   display: grid;
-  grid-template-rows: 50% 53%;
+  grid-template-rows: 32% 29%;
   grid-gap: 1rem;
 }
 section #right img {
@@ -76,25 +78,51 @@ section #right img {
 }
 
 @media (max-width: 1020px) {
+  main {
+    padding: 1vw;
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    background-color: #c6d1dd;
+  }
   section {
     width: 100%;
-    padding: 1rem;
+    padding: 1vw;
     display: flex;
+    gap: 1vw;
     flex-direction: column;
-    gap: 3rem;
   }
   section #left {
-    grid-gap: 23.5vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   section #left #lefttop {
+    height: 50vw;
     grid-gap: 1rem;
     display: grid;
     grid-template-areas: "a a b b " "c c c c" "d d e e ";
+    grid-template-rows: 50vw 40vw auto;
+    margin-bottom: 35vw;
+  }
+  section #left #lefttop #imgc {
+    grid-area: c;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section #left #leftbtm {
+    height: 35vw;
+    margin-top: 50vw;
+  }
+  section #left #leftbtm img {
+    height: 50vw;
   }
   section #right {
     display: grid;
-    grid-template-rows: 50% 53%;
-    grid-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
   }
   section #right img {
     height: 100%;
